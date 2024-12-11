@@ -1,0 +1,95 @@
+@import '../../utils/variables.scss';
+
+//#region BG
+.partners__background-grid {
+  position: relative;
+  /* Позволяет дочерним элементам позиционироваться относительно него */
+  z-index: 1;
+  /* Установите z-index для управления наложением */
+  margin-left: 32px;
+  width: $custom-width;
+  height: 690px;
+  display: grid;
+  grid-template-columns: 100px 1fr 1fr 1fr 1fr 100px;
+  border-top: 1px solid #FFB914;
+}
+
+.partners__bg-line {
+  border-left: 1px solid #FFB914;
+  /* Граница слева для полос */
+  height: 100%;
+  /* Высота полос */
+}
+
+.partners__bg-line:nth-child(1) {
+  grid-column: 1;
+  border-left: none;
+  /* Убираем границу для первой колонки */
+}
+
+//#endregion
+
+//#region content
+.partners {
+  position: relative;
+  margin-bottom: 83px;
+}
+
+.partners-gif {
+  background-image: url('./media/gif/content.gif');
+  background-size: cover;
+  /* Растянуть фон по размеру элемента */
+  width: 114px;
+  /* Задаём размеры элемента */
+  height: 90px;
+  transform: scaleX(-1);
+}
+
+.partners__content {
+  position: absolute;
+  top: 0px;
+  z-index: 2;
+}
+
+.partners-description {
+  font-family: $secondary-font;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.partners-cards {
+  display: flex;
+  flex-wrap: wrap; // Разрешаем перенос строк
+  gap: 64px;
+  justify-content: center; // Распределяем пространство между карточками
+}
+.partners-cards2 {
+  display: flex;
+  flex-wrap: wrap; // Разрешаем перенос строк
+  justify-content: center; // Распределяем пространство между карточками
+  gap: 144px;
+  
+}
+
+.partners-card {
+  margin-bottom: 32px; /* Отступ между рядами */
+  text-align: center; /* Центрирование содержимого карточки */
+  background-color: white;
+  transition: all 0.33s;
+}
+
+.partners-card:hover {
+  transform: scale(1.1);
+}
+
+
+.partners-card-image {
+  border: 1px solid #96B4C8;
+border-radius: 16px;
+}
+
+//#endregion

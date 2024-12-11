@@ -1,0 +1,33 @@
+/* Default state, show everything */
+body {
+  visibility: visible;
+}
+
+.content {
+  display: block;  /* Assuming the main content is inside a .content class */
+}
+
+/* Message styling */
+.mobile-message {
+  display: none;  /* Hide the message by default */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: white;
+  background-color: #333;
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 10000;  /* Make sure it's on top of other content */
+}
+
+@media (max-width: 1439px) {
+  /* On smaller screens, hide content and show the message */
+  .content {
+    display: none;  /* Hide content */
+  }
+  .mobile-message {
+    display: block;  /* Show the message */
+  }
+}

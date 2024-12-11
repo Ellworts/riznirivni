@@ -1,0 +1,78 @@
+@import '../../utils/variables.scss';
+
+.merch-section {
+  position: relative;
+}
+
+.merch-section__container {
+  margin-left: 32px;
+  margin-right: 32px;
+  margin-bottom: 100px;
+}
+
+.overlay-content {
+  border-top: 1px solid #96B4C8;
+  width: $custom-width;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+
+  .faq {
+    margin: 0;
+    font-family: $main-font;
+    font-style: italic;
+    font-size: 85px;
+    text-transform: uppercase;
+    color: $primary-text-color;
+
+    .w600 {
+      font-weight: 600;
+    }
+  }
+
+  .cards-grid {
+    margin-bottom: 315px;
+    justify-items: center;
+    align-items: center;
+    position: relative;
+    grid-template-columns: repeat(4, 1fr);
+    display: grid;
+    grid-gap: 16px;
+
+    .card {
+      border: 5px solid;
+      border-color: white;
+      border-radius: 16px;
+      transition: transform 0.4s ease, border-color 0.5s ease;
+
+      &:hover {
+        transform: scale(1.06);
+        border-color: rgba(255, 166, 0, 0.767);
+      }
+
+      &__image {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100%;
+        width: 100%;
+        border-radius: 16px;
+      }
+
+      &__headline {
+        margin: 0;
+        padding: 4px 16px;
+        text-transform: uppercase;
+        font-family: $main-font;
+        font-size: 26px;
+        line-height: 26px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: end;
+  }
+}

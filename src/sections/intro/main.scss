@@ -1,0 +1,50 @@
+@import '../../utils/variables.scss';
+
+.main {
+  width: $custom-width;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 91px;
+  margin-bottom: 100px;
+  padding-left: 32px;
+
+  &-items {
+    text-transform: uppercase;
+    font-family: $main-font;
+    font-size: 170px;
+    font-style: italic;
+    font-weight: 600;
+    color: $primary-text-color;
+    line-height: 123.2px;
+  }
+}
+
+.gradient-text {
+  background: $text-gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.description {
+  height: fit-content;
+  display: flex;
+  justify-content: flex-end;
+
+
+  &__container {
+    width: 680px;
+    height: 96px;
+
+    font-family: 'Inter', sans-serif;
+    color: $primary-text-color;
+
+    line-height: 24px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    
+    padding-top: 3%;
+    padding-bottom: 3%;
+  }
+}

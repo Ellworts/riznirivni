@@ -1,0 +1,44 @@
+@import '../../utils/variables.scss';
+
+.background-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 0;
+  position: relative;
+  margin: 0 auto;
+  max-width: calc(100% - 200px);
+  height: 940px;
+  border-left: 1px solid #96B4C8;
+  border-right: 1px solid #96B4C8;
+  z-index: -1000;
+  
+  &__element {
+    position: relative;
+    border-right: none;
+  }
+
+  &:before,
+  &:after,
+  .divider {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: #96B4C8;
+  }
+
+  &:before {
+    left: 25%;
+    width: 2px; /* Ширина боковой линии */
+  }
+
+  .divider {
+    left: 50%;
+    width: 1px; /* Ширина центральной линии (тоньше) */
+  }
+
+  &:after {
+    left: 75%;
+    width: 2px; /* Ширина боковой линии */
+  }
+}

@@ -1,42 +1,45 @@
 {
-  "name": "gulp-boilerplate",
-  "version": "1.0.0",
-  "description": "Frontend boilerplate based on gulp",
+  "name": "riznirivni",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "css-loader": "^7.1.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-scripts": "5.0.1",
+    "sass": "^1.82.0",
+    "sass-loader": "^16.0.4",
+    "style-loader": "^4.0.0",
+    "web-vitals": "^2.1.4"
+  },
   "scripts": {
-    "init": "mate-scripts init",
-    "start": "mate-scripts start",
-    "lint": "mate-scripts lint",
-    "test:only": "mate-scripts test",
-    "build": "mate-scripts build",
-    "deploy": "mate-scripts deploy",
-    "update": "mate-scripts update",
-    "postinstall": "npm run update",
-    "test": "npm run lint && npm run test:only"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "keywords": [],
-  "author": "Mate Academy",
-  "license": "GPL-3.0",
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
   "devDependencies": {
-    "@linthtml/linthtml": "^0.9.6",
-    "@mate-academy/eslint-config": "latest",
-    "@mate-academy/linthtml-config": "latest",
-    "@mate-academy/scripts": "^1.8.5",
-    "@mate-academy/stylelint-config": "latest",
-    "@parcel/transformer-sass": "^2.12.0",
-    "eslint": "^8.57.0",
-    "eslint-plugin-node": "^11.1.0",
-    "parcel": "^2.12.0",
-    "prettier": "^3.3.2",
-    "stylelint": "^16.7.0",
-    "stylelint-scss": "^6.4.1"
-  },
-  "browserslist": [
-    "last 2 versions"
-  ],
-  "mateAcademy": {
-    "projectType": "layout",
-    "linters": {
-      "bem": false
-    }
+    "resolve-url-loader": "^5.0.0"
   }
 }

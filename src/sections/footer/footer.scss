@@ -1,0 +1,114 @@
+@import '../../utils/variables.scss';
+
+.footer-wrapper {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.footer-content {
+  background-image: url('./media/gif/ezgif-3-842b33e225.gif');
+  background-position-x: 80%;
+  background-position-y: 64px;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  padding-left: 32px;
+  display: flex;
+  width: 100%;
+
+  height: 279px; // Высота контейнера
+  background-color: #e0f7fa; // Замените этот цвет на нужный вам
+  align-items: end; // Центрируем кнопки по вертикали
+
+  .footer-menu {
+    font-family: $main-font;
+    display: flex;
+    flex-direction: column;
+    padding: 8px 48px; // Установленные отступы (Top 8px, Right 48px, Bottom 8px, Left 24px)
+    border-radius: 68px;
+    border: 1px solid rgb(231, 231, 231);
+    background-color: #fff;
+    opacity: 1;
+    transition: all 0.3s ease;
+    text-align: left; // Центрируем текст внутри кнопки
+    position: relative;
+    margin: 32px 12px; // Отступы по 12px с обеих сторон
+
+    .number {
+      font-weight: 700;
+      line-height: 32px;
+      font-size: 32px;
+      color: #ff4500;
+    }
+
+    .label {
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 40px;
+      color: #373737;
+    }
+
+    // Добавление псевдоэлементов для эффекта тени
+    &:before {
+      content: '';
+      position: absolute;
+      top: -10px; // Сдвиг тени
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(255, 69, 0, 0.1); // Цвет тени
+      border-radius: 20px; // Закругленные углы
+      z-index: -1; // Позиционирование под кнопкой
+      opacity: 0.5; // Прозрачность тени
+    }
+
+    &:hover {
+      background-color: #ececec; // Цвет фона при наведении
+      color: #fff; // Цвет текста при наведении
+    }
+  }
+}
+
+.footer-bottom {
+  padding: 16px 32px 8px 32px;
+  display: flex; // Использование flex для нижней части
+  justify-content: space-between; // Расположение элементов
+  width: $custom-width; // Установлена ширина футера
+  height: 36px; // Установлена высота футера
+  gap: 0; // Установлено расстояние между элементами
+  opacity: 1; // Установлена прозрачность футера
+  background-color: white;
+
+  p {
+    font-family: $main-font;
+    color: $primary-text-color;
+    font-weight: 400;
+    line-height: 18.2px;
+    text-align: center;
+    font-size: 14px;
+
+    margin: 5px 0; // Отступы для параграфов
+  }
+
+  #underline {
+    color: $primary-text-color;
+    text-decoration: underline;
+    font-weight: 400;
+  }
+
+  #right {
+    line-height: 27px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  #left {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

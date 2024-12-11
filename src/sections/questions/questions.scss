@@ -1,0 +1,129 @@
+@import '../../utils/variables.scss';
+
+.questions-container {
+  margin-left: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 100px;
+}
+
+.questions__grid {
+  display: grid;
+  grid-template-columns: auto 788px;
+  column-gap: 24px;
+  width: $custom-width;
+}
+
+.questions__button-container {
+  justify-content: end;
+  display: flex;
+  width: $custom-width;
+  
+  padding-top: 32px;
+  padding-bottom: 32px;
+  margin-bottom: 100px;
+  margin-left: 32px;
+}
+
+.myths-title {
+  text-transform: uppercase;
+  font-family: $main-font;
+  font-style: italic;
+  color: #373737;
+  font-size: 80px;
+  font-weight: 400;
+  line-height: 80px;
+  margin: 0;
+
+  .w600 {
+    font-weight: 600;
+  }
+}
+
+.accordion {
+  width: 788px;
+  max-width: 100%;
+  margin: 0;
+
+  .accordion-item {
+    color: $primary-text-color;
+    border-bottom: 1px solid #ccc;
+    padding: 32px 0;
+
+    .accordion-wrapper {
+      display: flex;
+
+      .accordion-number {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 56px;
+        font-family: 'Alumni Sans', sans-serif;
+        font-size: 40px;
+        font-weight: 400;
+        text-align: center;
+        margin-right: 24px;
+        transition: box-shadow 0.3s ease, border 0.3s ease;
+        border: 2px solid transparent;
+
+        &.open {
+          border-color: #F5AAC8;
+        }
+
+        &:hover {
+          box-shadow: 0 0 0 4px #F5AAC8;
+        }
+      }
+
+      .accordion-inner {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .accordion-title {
+          display: flex;
+          align-items: center;
+          font-family: $main-font;
+          font-size: 32px;
+          font-weight: 400;
+          text-transform: uppercase;
+          user-select: none;
+          margin-bottom: 8px;
+          flex-grow: 1;
+        }
+
+        .accordion-content {
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.75s ease;
+          padding-right: 15px;
+
+          p {
+            font-family: $secondary-font;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            padding: 16px 0;
+            margin: 0;
+          }
+        }
+
+        .accordion-content.open {
+          max-height: 232px;
+        }
+      }
+
+      .accordion-toggle {
+        font-family: $main-font;
+        font-size: 32px;
+        font-weight: 400;
+        color: $primary-text-color;
+        margin-left: 16px;
+      }
+    }
+  }
+}

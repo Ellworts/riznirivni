@@ -1,0 +1,24 @@
+* {
+  cursor: none;
+  scroll-behavior: smooth;
+}
+
+.custom-cursor {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid #F05528;
+  background: transparent;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+  transition: background-color 0.3s, border-color 0.3s, width 0.3s, height 0.3s;
+}
+
+.custom-cursor.hovering-interactive {
+  width: 55px;
+  height: 55px;
+  background-color: rgba(240, 85, 40, 0.5);
+  border-color: rgba(0, 0, 0, 0);
+}

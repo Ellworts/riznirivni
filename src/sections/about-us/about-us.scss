@@ -1,0 +1,128 @@
+@import '../../utils/variables.scss';
+
+.about-us_container {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  width: $custom-width;
+  margin-left: 32px;
+  margin-right: 32px;
+}
+
+//#region Title
+.about-us__title-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 16px 0 64px;
+
+}
+
+.about-us-title {
+  padding: 4px 32px;
+  text-transform: uppercase;
+  font-family: "Alumni Sans", sans-serif;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  font-size: 40px;
+  line-height: 40px;
+  text-align: right;
+  color: #373737;
+  margin: 0;
+}
+
+//#endregion
+
+//#region Main Text
+.about-us__text {
+  text-align: right;
+  line-height: 96px;
+  font-family: $main-font;
+  color: $primary-text-color;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 130px;
+  text-transform: uppercase;
+  margin-bottom: 100px;
+
+  &-main {
+    margin: 0;
+    font-weight: 600;
+  }
+}
+
+//#endregion
+
+//#region Content
+.about-us__content-grid {
+  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 611px 235px;
+}
+
+.about-us__content-text {
+  font-family: $secondary-font;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.custom-button--about-us {
+  align-self: flex-end;
+  font-family: $main-font;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 26px;
+  text-transform: uppercase;
+  
+  position: relative;
+  display: flex;
+  width: 235px;
+  height: 42px;
+  padding: 8px 24px;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 60px;
+  border: 1px solid #96B4C8;
+
+  background: white;
+
+  transition: color 0.5s, border 0.5s;
+
+  overflow: hidden;
+  background: white;
+  color: black;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 100%;
+    background: $slider-gradient;
+    transition: left 0.5s ease-in-out;
+    z-index: 0;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    z-index: 1;
+  }
+
+  &:hover {
+    background-color: $text-gradient;
+    
+    &::before {
+      left: 0;
+    }
+  }
+}
+//#endregion
